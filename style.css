@@ -1,13 +1,24 @@
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
 body{
     background-color: rgb(206, 206, 206);
 }
 
 div{
     display: flex;
+    align-items: center;
     flex-direction: column;
-    margin-right: 0px;
-    margin-left: 230px;
     margin-top: 40px;
+
+}
+
+div.galeriaimagens{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 header{
@@ -43,10 +54,33 @@ main{
     margin-top: 5px;
 }
 
+p, h2.home, h2.galeria{
+    margin: 20px 20px
+}
+
+main.login{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+img{
+    display: flex;
+    flex-grow: 1;
+    border-radius: 10px;
+    margin: 10px;
+    width: 160px;
+    height: 200px;
+}
+
 a{
     color: rgb(179, 179, 179);
     text-align: center;
     text-decoration: none;
+}
+
+a.login{
+    color: rgb(61, 61, 215);
+    text-decoration: dashed solid rgb(61, 61, 215);
 }
 
 a:hover{
@@ -54,25 +88,37 @@ a:hover{
     border-bottom: solid white 2px;
 }
 
+a.login:hover{
+    color: rgb(175, 200, 242);
+}
+
+
+@media screen and (max-width: 1200px){
+    div.galeria, header.galeria, nav.galeria, main.galeria{
+        width: 100%;
+        margin: 2px;
+        justify-content: center;
+        align-self: center;
+    }
+
+    nav.galeria{
+        justify-content: space-evenly;
+    }
+
+
+}
 
 @media screen and (max-width: 600px){
-    div{
+    div, header, nav{
         display: flex;
         margin: 0;
         align-items: center;
-    }
-    header{
-        margin: 0;
         width: 100%;
     }
-    nav{
-        margin: 0;
-        width: 100%;
-    }
-    main{
-        display: flex;
-        width: 100%;
+
+    main.galeria, main.home, main.login{
         flex-wrap: wrap;
-        margin: 0;
+        width: 100%;
     }
+
 }
