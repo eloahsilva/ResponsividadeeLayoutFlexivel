@@ -54,6 +54,16 @@ main{
     margin-top: 5px;
 }
 
+footer{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
 p, h2.home, h2.galeria{
     margin: 20px 20px
 }
@@ -92,9 +102,8 @@ a.login:hover{
     color: rgb(175, 200, 242);
 }
 
-
 @media screen and (max-width: 1200px){
-    div.galeria, header.galeria, nav.galeria, main.galeria{
+    div.galeria, header.galeria, nav.galeria, main.galeria, footer{
         width: 100%;
         margin: 2px;
         justify-content: center;
@@ -109,7 +118,7 @@ a.login:hover{
 }
 
 @media screen and (max-width: 600px){
-    div, header, nav{
+    div, header, nav, footer{
         display: flex;
         margin: 0;
         align-items: center;
